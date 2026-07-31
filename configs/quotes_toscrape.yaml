@@ -1,26 +1,36 @@
 # Site 2/5 -- Niveau 1
-# Limite connue : chaque citation peut avoir un NOMBRE VARIABLE de tags
-# (1 a 5+), alors que GenericPipeline suppose un nombre fixe d'occurrences
-# par champ (aligne index par index). On ne capture donc que le PREMIER
-# tag de chaque citation via ":first-child" -- a documenter dans le
-# rapport comme limite du modele de selection "plat".
+# Utilise le mode "par ligne" (row_selector) pour un alignement fiable :
+# chaque citation est isolee (div.quote), et chaque champ est cherche
+# A L'INTERIEUR de cette citation, pas sur toute la page.
+#
+# Le champ "tag" a un NOMBRE VARIABLE de valeurs par citation (1 a 5+).
+# Utilise "multi: true" pour capturer TOUS les tags (pas juste le
+# premier), joints par ", ". Attention au piege deja rencontre : le tout
+# premier enfant de div.tags est un <meta class="keywords">, PAS un
+# <a class="tag"> -- :first-child aurait donc echoue, mais ici on prend
+# tous les <a class="tag"> directement, sans depender de leur position.
 #
 # 'url' ne pointe pas vers une fiche citation (qui n'existe pas), mais
 # vers la page bio de l'auteur (lien "(about)"), seul lien disponible par
 # citation -- necessaire car Validator exige un champ 'url'.
 
 url: https://quotes.toscrape.com/
+row_selector: "div.quote"
 pagination:
   pattern: "page/{n}/"
   start: 1
   max_pages: 5
 selectors:
-  citation: "div.quote span.text"
-  auteur: "div.quote small.author"
+  citation: "span.text"
+  auteur: "small.author"
   url:
-    selector: "div.quote > span > a"
+    selector: "span > a"
     attr: href
-  tag: "div.quote div.tags a.tag:first-child"
+  tag:
+    selector: "div.tags a.tag"
+    multi: true
+validator:
+  required_fields: [citation, url]
 fetcher:
   delay: 1.0
   retries: 3

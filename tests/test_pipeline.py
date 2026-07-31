@@ -69,6 +69,47 @@ def test_pagination_no_pattern_returns_none():
     assert pipeline.next_page_url(HTML_SAMPLE, "https://example.com/") is None
 
 
+HTML_MULTI_VALUES = """
+<div class="quote">
+  <span class="text">Citation test</span>
+  <div class="tags">
+    <meta class="keywords" content="a, b, c">
+    <a class="tag">change</a>
+    <a class="tag">deep-thoughts</a>
+    <a class="tag">thinking</a>
+  </div>
+</div>
+"""
+
+
+def test_row_mode_multi_captures_all_values():
+    pipeline = GenericPipeline(
+        selectors={
+            "citation": "span.text",
+            "tag": {"selector": "div.tags a.tag", "multi": True},
+        },
+        row_selector="div.quote",
+    )
+    items = pipeline.process(HTML_MULTI_VALUES)
+
+    assert len(items) == 1
+    assert items[0]["tag"] == "change, deep-thoughts, thinking"
+
+
+def test_row_mode_single_value_ignores_meta_before_first_a():
+    """
+    Le premier enfant de div.tags est un <meta>, pas un <a class='tag'> --
+    un champ non-multi doit quand meme trouver le premier <a> via
+    select_one, sans etre trompe par le <meta> precedent.
+    """
+    pipeline = GenericPipeline(
+        selectors={"premier_tag": "div.tags a.tag"},
+        row_selector="div.quote",
+    )
+    items = pipeline.process(HTML_MULTI_VALUES)
+    assert items[0]["premier_tag"] == "change"
+
+
 HTML_RATING_SAMPLE = """
 <html><body>
 <article class="product_pod">

@@ -14,6 +14,7 @@ from .middleware import LoggingMiddleware, RetryMiddleware
 from .pipeline import PaginationPipeline
 from .validator import Validator
 from .store import Store
+from .detail import DetailExtractor
 
 
 class Orchestrator:
@@ -24,13 +25,20 @@ class Orchestrator:
             middlewares=[LoggingMiddleware(), RetryMiddleware(config)],
         )
         self.pipeline = PaginationPipeline(
-            config.selectors, config.pagination, base_url=config.url
+            config.selectors, config.pagination, base_url=config.url,
+            row_selector=config.row_selector,
         )
         self.validator = Validator(
             required_fields=config.validator.required_fields,
             min_lengths=config.validator.min_lengths,
         )
         self.store = Store(config.store.backend, config.store.path)
+
+        # Pattern liste -> detail (optionnel) : si active, chaque item
+        # valide sera enrichi en visitant sa propre page.
+        self.detail_extractor = (
+            DetailExtractor(config.detail.selectors) if config.detail else None
+        )
 
     def run(self, dry_run: bool = False) -> dict:
         """Lance le scraping complet (pagination automatique). Retourne un rapport."""
@@ -54,6 +62,21 @@ class Orchestrator:
             valides, rejetes = self.validator.validate(items)
             items_valides_total += len(valides)
             items_rejetes_total += len(rejetes)
+
+            # Pattern liste -> detail : enrichir chaque item valide en
+            # visitant sa propre page (capitale, continent, etc.)
+            if self.detail_extractor and not dry_run:
+                for item in valides:
+                    url_detail = item.get(self.config.detail.url_field)
+                    if not url_detail:
+                        continue
+                    try:
+                        html_detail = self.fetcher.fetch(url_detail)
+                        champs_supplementaires = self.detail_extractor.extract(html_detail)
+                        item.update(champs_supplementaires)
+                    except Exception as e:
+                        print(f"Erreur detail sur {url_detail} : {e}")
+                    time.sleep(self.config.fetcher.delay)
 
             if dry_run:
                 for item in valides:

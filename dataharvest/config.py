@@ -73,11 +73,18 @@ class Config:
         self._raw = data
         self.url = data["url"]
         self.pagination = Box(data["pagination"])
+        # selectors reste un dict simple (pas un Box), comme demande par la spec
         self.selectors = dict(data["selectors"])
         self.fetcher = Box(data["fetcher"])
         self.store = Box(data["store"])
 
-        # "validator" : permet a chaque site de definir
+        # row_selector (optionnel) : active le mode "par ligne" de
+        # GenericPipeline, plus robuste que la selection a plat quand une
+        # meme cellule peut contenir plusieurs elements matchant un
+        # selecteur (ex: plusieurs liens/noms alternatifs par ligne).
+        self.row_selector = data.get("row_selector")
+
+        # Section optionnelle "validator" : permet a chaque site de definir
         # ses propres champs obligatoires (ex: "citation" au lieu de "titre"
         # pour quotes.toscrape.com). Valeurs par defaut si absente, pour
         # rester compatible avec les configs existantes.
@@ -98,6 +105,28 @@ class Config:
             min_lengths=validator_data["min_lengths"],
         )
 
+        # Section optionnelle "detail" : active le pattern liste -> detail.
+        # Si presente, l'Orchestrator visitera l'URL de chaque item valide
+        # pour en extraire des champs supplementaires (ex: capitale,
+        # continent) via dataharvest.detail.DetailExtractor.
+        #
+        # NB: meme piege que pour "validator" -- pas de Box ici, "selectors"
+        # doit rester un vrai dict (avec des dicts imbriques pour les modes
+        # avances), pas un objet Box.
+        detail_data = data.get("detail")
+        if detail_data:
+            class _DetailConfig:
+                def __init__(self, url_field, selectors):
+                    self.url_field = url_field
+                    self.selectors = selectors
+
+            self.detail = _DetailConfig(
+                url_field=detail_data.get("url_field", "url"),
+                selectors=detail_data["selectors"],
+            )
+        else:
+            self.detail = None
+
         # normalisation des types attendus
         self.fetcher.delay = float(self.fetcher.delay)
         self.fetcher.timeout = float(self.fetcher.timeout)
@@ -105,5 +134,3 @@ class Config:
 
     def __repr__(self):
         return f"Config(url={self.url!r}, store={self.store.backend!r})"
-
-    

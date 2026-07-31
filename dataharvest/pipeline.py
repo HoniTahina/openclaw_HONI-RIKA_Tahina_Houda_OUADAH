@@ -24,20 +24,70 @@ class GenericPipeline(BasePipeline):
     Pipeline generique pilotee entierement par les selecteurs CSS de la
     config -- aucun selecteur n'est code en dur ici.
 
-    Strategie : le premier champ des selectors sert de "reference" pour
-    determiner combien d'items il y a sur la page (on suppose que tous
-    les champs ont le meme nombre d'occurrences, une par item/carte).
+    Deux modes de fonctionnement :
+
+    1. MODE PLAT (par defaut, row_selector absent) : chaque champ est
+       selectionne sur TOUTE la page (soup.select()), et les items sont
+       reconstruits en zippant les resultats par INDEX. Simple et rapide,
+       mais fragile si une cellule contient plusieurs elements matchant
+       le meme selecteur (ex: plusieurs liens dans une meme cellule) :
+       ca decale l'alignement entre les champs.
+
+    2. MODE PAR LIGNE (row_selector fourni) : on delimite d'abord les
+       conteneurs de lignes (ex: "table tr"), puis CHAQUE champ est
+       cherche a l'INTERIEUR de chaque ligne via select_one() (premier
+       match dans le sous-arbre de cette ligne uniquement). Beaucoup
+       plus robuste face aux cellules contenant plusieurs elements
+       similaires (ex: plusieurs noms/liens alternatifs par ligne),
+       quelle que soit leur profondeur d'imbrication.
     """
 
-    def __init__(self, selectors: dict, base_url: str = ""):
+    def __init__(self, selectors: dict, base_url: str = "", row_selector: str | None = None):
         self.selectors = selectors
         self.base_url = base_url
+        self.row_selector = row_selector
 
     def process(self, html: str) -> list[dict]:
         if not html:
             return []
 
         soup = BeautifulSoup(html, "lxml")
+
+        if self.row_selector:
+            return self._process_par_ligne(soup)
+        return self._process_a_plat(soup)
+
+    def _process_par_ligne(self, soup: BeautifulSoup) -> list[dict]:
+        items = []
+        for ligne in soup.select(self.row_selector):
+            item = {}
+            a_au_moins_un_champ = False
+            for champ, spec in self.selectors.items():
+                selecteur, attr = self._decomposer_spec(spec)
+                multi = isinstance(spec, dict) and spec.get("multi", False)
+
+                if multi:
+                    # Champ a valeurs multiples (ex: plusieurs tags par
+                    # citation) : on prend TOUS les matches dans la ligne,
+                    # jointes par ", " plutot qu'un seul comme les autres
+                    # champs.
+                    elements = ligne.select(selecteur)
+                    if elements:
+                        a_au_moins_un_champ = True
+                    valeurs = [
+                        self._extraire_valeur(el, champ, attr) for el in elements
+                    ]
+                    item[champ] = ", ".join(v for v in valeurs if v)
+                else:
+                    el = ligne.select_one(selecteur)
+                    if el is not None:
+                        a_au_moins_un_champ = True
+                    item[champ] = self._extraire_valeur(el, champ, attr) if el else ""
+            if a_au_moins_un_champ:
+                items.append(item)
+        return items
+
+    def _process_a_plat(self, soup: BeautifulSoup) -> list[dict]:
         champs = list(self.selectors.keys())
         if not champs:
             return []
@@ -123,8 +173,8 @@ class PaginationPipeline(GenericPipeline):
     d'items.
     """
 
-    def __init__(self, selectors: dict, pagination_config, base_url: str = ""):
-        super().__init__(selectors, base_url=base_url)
+    def __init__(self, selectors: dict, pagination_config, base_url: str = "", row_selector: str | None = None):
+        super().__init__(selectors, base_url=base_url, row_selector=row_selector)
         self.pagination_config = pagination_config
         self._page_actuelle = getattr(pagination_config, "start", 1)
 
