@@ -34,6 +34,8 @@ class Fetcher:
                     headers=req_headers,
                     timeout=self.config.fetcher.timeout,
                 )
+                response.encoding = response.apparent_encoding
+                
                 for mw in self.middlewares:
                     response = mw.process_response(response)
 
