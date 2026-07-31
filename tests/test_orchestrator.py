@@ -1,5 +1,6 @@
 from unittest.mock import patch, MagicMock
 
+import json
 import yaml
 
 from dataharvest.config import Config

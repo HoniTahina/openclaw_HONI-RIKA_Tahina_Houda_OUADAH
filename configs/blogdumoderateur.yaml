@@ -1,28 +1,31 @@
-# Site 5/5 -- Niveau 3
-# Selecteurs verifies contre le vrai HTML du site (TP anterieur de ce
-# meme projet) -- PAS ceux de l'exemple generique du sujet
-# (h2.post-title), qui ne correspondent pas a la structure reelle.
+url: https://www.blogdumoderateur.com/articles/
 
-url: https://www.blogdumoderateur.com/actualites/
 pagination:
-  pattern: "page/{n}/"
+  pattern: "/articles/page/{n}/"
   start: 1
   max_pages: 5
+
 selectors:
-  titre: "header.entry-header h3.entry-title"
+  titre: "main article h3.entry-title"
+
   url:
-    selector: "header.entry-header a"
+    selector: "main article a[href]"
     attr: href
+
   date:
-    selector: "time.entry-date"
+    selector: "main article time[datetime]"
     attr: datetime
-  categorie: ".favtag"
-  chapeau: ".entry-excerpt"
+
+  categorie: "main article .favtag"
+
+  chapeau: "main article .entry-excerpt"
+
 fetcher:
   delay: 1.5
   retries: 3
   timeout: 15
   user_agent: "DataHarvest/1.0 (+contact@ipssi.fr)"
+
 store:
-  backend: csv
-  path: output/blogdumoderateur.csv
+  backend: sqlite
+  path: output/articles.db

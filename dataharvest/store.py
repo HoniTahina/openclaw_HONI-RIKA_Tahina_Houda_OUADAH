@@ -7,6 +7,17 @@ from pathlib import Path
 class Store:
     BACKENDS = ("csv", "sqlite", "json")
 
+    @classmethod
+    def backend_from_path(cls, path: str) -> str:
+        suffix = Path(path).suffix.lower()
+        if suffix in (".db", ".sqlite"):
+            return "sqlite"
+        if suffix == ".csv":
+            return "csv"
+        if suffix == ".json":
+            return "json"
+        raise ValueError(f"Impossible de deduire le backend depuis l'extension : {path}")
+
     def __init__(self, backend: str, path: str):
         if backend not in self.BACKENDS:
             raise ValueError(f"Backend inconnu: {backend}")

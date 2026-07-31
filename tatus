@@ -1,0 +1,110 @@
+[1mdiff --git a/dataharvest/validator.py b/dataharvest/validator.py[m
+[1mindex e69de29..389585f 100644[m
+[1m--- a/dataharvest/validator.py[m
+[1m+++ b/dataharvest/validator.py[m
+[36m@@ -0,0 +1,47 @@[m
+[32m+[m[32mfrom __future__ import annotations[m
+[32m+[m[32mimport logging[m
+[32m+[m[32mfrom urllib.parse import urlparse[m
+[32m+[m
+[32m+[m[32mlogger = logging.getLogger("dataharvest")[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass Validator:[m
+[32m+[m[32m    def __init__(self, required_fields: list[str], min_lengths: dict | None = None):[m
+[32m+[m[32m        self.required_fields = required_fields[m
+[32m+[m[32m        self.min_lengths = min_lengths or {}[m
+[32m+[m
+[32m+[m[32m    def is_valid_url(self, url: str) -> bool:[m
+[32m+[m[41m        [m
+[32m+[m[32m        if not url or not isinstance(url, str):[m
+[32m+[m[32m            return False[m
+[32m+[m[32m        parsed = urlparse(url)[m
+[32m+[m[32m        return parsed.scheme in ("http", "https") and bool(parsed.netloc)[m
+[32m+[m
+[32m+[m[32m    def validate(self, items: list[dict]) -> tuple[list[dict], list[dict]]:[m
+[32m+[m[41m        [m
+[32m+[m[32m        valides, rejetes = [], [][m
+[32m+[m
+[32m+[m[32m        for item in items:[m
+[32m+[m[32m            motif = self._motif_rejet(item)[m
+[32m+[m[32m            if motif:[m
+[32m+[m[32m                logger.warning("Item rejete (%s) : %s", motif, item)[m
+[32m+[m[32m                rejetes.append(item)[m
+[32m+[m[32m            else:[m
+[32m+[m[32m                valides.append(item)[m
+[32m+[m
+[32m+[m[32m        return valides, rejetes[m
+[32m+[m
+[32m+[m[32m    def _motif_rejet(self, item: dict) -> str | None:[m
+[32m+[m[32m        for champ in self.required_fields:[m
+[32m+[m[32m            if not item.get(champ):[m
+[32m+[m[32m                return f"champ obligatoire manquant ou vide : {champ}"[m
+[32m+[m
+[32m+[m[32m        if item.get("url") and not self.is_valid_url(item["url"]):[m
+[32m+[m[32m            return "url invalide"[m
+[32m+[m
+[32m+[m[32m        for champ, longueur_min in self.min_lengths.items():[m
+[32m+[m[32m            valeur = item.get(champ, "")[m
+[32m+[m[32m            if len(valeur) < longueur_min:[m
+[32m+[m[32m                return f"{champ} trop court (< {longueur_min} caracteres)"[m
+[32m+[m
+[32m+[m[32m        return None[m
+[1mdiff --git a/tests/test_validator.py b/tests/test_validator.py[m
+[1mindex e69de29..e5fe70a 100644[m
+[1m--- a/tests/test_validator.py[m
+[1m+++ b/tests/test_validator.py[m
+[36m@@ -0,0 +1,53 @@[m
+[32m+[m[32mfrom dataharvest.validator import Validator[m
+[32m+[m[32mdef test_validate_rejects_missing_required_field():[m
+[32m+[m[32m    validator = Validator(required_fields=["titre", "url"])[m
+[32m+[m[32m    items = [{"titre": "Test"}]  # url manquant[m
+[32m+[m
+[32m+[m[32m    valides, rejetes = validator.validate(items)[m
+[32m+[m[32m    assert valides == [][m
+[32m+[m[32m    assert len(rejetes) == 1[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_validate_rejects_invalid_url():[m
+[32m+[m[32m    validator = Validator(required_fields=["titre", "url"])[m
+[32m+[m[32m    items = [{"titre": "Test", "url": "pas-une-url"}][m
+[32m+[m
+[32m+[m[32m    valides, rejetes = validator.validate(items)[m
+[32m+[m[32m    assert valides == [][m
+[32m+[m[32m    assert len(rejetes) == 1[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_validate_accepts_valid_item():[m
+[32m+[m[32m    validator = Validator(required_fields=["titre", "url"])[m
+[32m+[m[32m    items = [{"titre": "Test", "url": "https://example.com/page"}][m
+[32m+[m
+[32m+[m[32m    valides, rejetes = validator.validate(items)[m
+[32m+[m[32m    assert len(valides) == 1[m
+[32m+[m[32m    assert rejetes == [][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_validate_min_lengths():[m
+[32m+[m[32m    validator = Validator(required_fields=["titre"], min_lengths={"titre": 5})[m
+[32m+[m[32m    items = [{"titre": "abc"}][m
+[32m+[m
+[32m+[m[32m    valides, rejetes = validator.validate(items)[m
+[32m+[m[32m    assert valides == [][m
+[32m+[m[32m    assert len(rejetes) == 1[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_validate_min_lengths_accepts_long_enough():[m
+[32m+[m[32m    validator = Validator(required_fields=["titre"], min_lengths={"titre": 5})[m
+[32m+[m[32m    items = [{"titre": "titre suffisamment long"}][m
+[32m+[m
+[32m+[m[32m    valides, rejetes = validator.validate(items)[m
+[32m+[m[32m    assert len(valides) == 1[m
+[32m+[m[32m    assert rejetes == [][m
+[32m+[m
+[32m+[m[32mdef test_is_valid_url():[m
+[32m+[m[32m    validator = Validator(required_fields=[])[m
+[32m+[m[32m    assert validator.is_valid_url("https://example.com") is True[m
+[32m+[m[32m    assert validator.is_valid_url("http://example.com/page") is True[m
+[32m+[m[32m    assert validator.is_valid_url("ftp://example.com") is False[m
+[32m+[m[32m    assert validator.is_valid_url("pas-une-url") is False[m
+[32m+[m[32m    assert validator.is_valid_url("") is False[m
+[32m+[m[32m    assert validator.is_valid_url(None) is False[m

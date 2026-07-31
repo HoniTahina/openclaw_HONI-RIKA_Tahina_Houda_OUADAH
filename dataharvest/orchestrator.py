@@ -1,14 +1,5 @@
-"""
-Orchestrator -- assemble tous les composants et pilote le scraping complet.
-
-C'est le SEUL composant qui connait tous les autres : Config, Fetcher,
-Pipeline, Validator et Store communiquent exclusivement via l'Orchestrator,
-jamais directement entre eux.
-"""
 from __future__ import annotations
-
 import time
-
 from .fetcher import Fetcher
 from .middleware import LoggingMiddleware, RetryMiddleware
 from .pipeline import PaginationPipeline
@@ -95,6 +86,7 @@ class Orchestrator:
                 time.sleep(self.config.fetcher.delay)
 
         duree = time.perf_counter() - debut
+        exports = [] if dry_run else self._maybe_export()
 
         return self._build_report(
             pages_scrapees,
@@ -103,9 +95,24 @@ class Orchestrator:
             items_stockes_total,
             items_trouves,
             duree,
+            exports,
         )
 
-    def _build_report(self, fetched, valid, rejected, stored, found, duree) -> dict:
+    def _maybe_export(self) -> list[dict]:
+        export_paths = getattr(self.config.store, "export_to", None)
+        if not export_paths:
+            return []
+        if isinstance(export_paths, str):
+            export_paths = [export_paths]
+
+        exports = []
+        for path in export_paths:
+            backend = Store.backend_from_path(path)
+            count = self.store.export_to(backend, path)
+            exports.append({"path": path, "backend": backend, "items_exported": count})
+        return exports
+
+    def _build_report(self, fetched, valid, rejected, stored, found, duree, exports) -> dict:
         return {
             "pages_scrapees": fetched,
             "items_trouves": found,

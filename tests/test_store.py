@@ -44,6 +44,21 @@ def test_store_sqlite_no_duplicate_on_same_url(tmp_path):
     assert store.count() == 1
 
 
+def test_store_sqlite_updates_existing_item_without_creating_duplicate(tmp_path):
+    path = tmp_path / "items.db"
+    store = Store("sqlite", str(path))
+
+    item1 = {"titre": "A", "url": "https://a.com", "chapeau": "premier"}
+    item2 = {"titre": "A", "url": "https://a.com", "chapeau": "deuxieme"}
+
+    store.save([item1])
+    store.save([item2])
+
+    items = store._load_all_items()
+    assert len(items) == 1
+    assert items[0]["chapeau"] == "deuxieme"
+
+
 def test_store_csv_creates_file(tmp_path):
     path = tmp_path / "items.csv"
     store = Store("csv", str(path))

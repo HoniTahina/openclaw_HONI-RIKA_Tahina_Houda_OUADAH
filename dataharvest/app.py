@@ -8,13 +8,7 @@ from .store import Store
 
 
 def _backend_from_ext(path: str) -> str:
-    if path.endswith(".db") or path.endswith(".sqlite"):
-        return "sqlite"
-    if path.endswith(".csv"):
-        return "csv"
-    if path.endswith(".json"):
-        return "json"
-    raise ValueError(f"Impossible de deduire le backend depuis l'extension : {path}")
+    return Store.backend_from_path(path)
 
 
 def cmd_crawl(args):
