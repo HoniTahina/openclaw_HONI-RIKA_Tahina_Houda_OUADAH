@@ -1,22 +1,34 @@
+"""
+Store -- persistance des items valides, 3 backends interchangeables.
+"""
 from __future__ import annotations
+
 import csv
 import json
 import sqlite3
 from pathlib import Path
 
+
 class Store:
     BACKENDS = ("csv", "sqlite", "json")
-
     @classmethod
     def backend_from_path(cls, path: str) -> str:
+        """Déduit le backend à partir de l'extension du fichier."""
+
         suffix = Path(path).suffix.lower()
+
         if suffix in (".db", ".sqlite"):
             return "sqlite"
+
         if suffix == ".csv":
             return "csv"
+
         if suffix == ".json":
             return "json"
-        raise ValueError(f"Impossible de deduire le backend depuis l'extension : {path}")
+
+        raise ValueError(
+            f"Impossible de déduire le backend depuis l'extension : {path}"
+        )
 
     def __init__(self, backend: str, path: str):
         if backend not in self.BACKENDS:
@@ -65,17 +77,43 @@ class Store:
         return len(items)
 
     def _save_sqlite(self, items: list[dict]) -> int:
+        """
+        Insère les nouvelles URL et met à jour les items existants.
+
+        Le nombre retourné correspond uniquement aux nouvelles lignes.
+        """
+
         inserted = 0
-        with sqlite3.connect(self.path) as cx:
+
+        with sqlite3.connect(self.path) as connection:
             for item in items:
-                url = item.get("url", "")
+                url = item.get("url")
+
+                if not url:
+                    continue
+
                 data = json.dumps(item, ensure_ascii=False)
-                cur = cx.execute(
-                    "INSERT OR IGNORE INTO items (url, data) VALUES (?, ?)",
+
+                existing_item = connection.execute(
+                    "SELECT 1 FROM items WHERE url = ?",
+                    (url,),
+                ).fetchone()
+
+                connection.execute(
+                    """
+                    INSERT INTO items (url, data)
+                    VALUES (?, ?)
+                    ON CONFLICT(url) DO UPDATE SET
+                        data = excluded.data
+                    """,
                     (url, data),
                 )
-                inserted += cur.rowcount
-            cx.commit()
+
+                if existing_item is None:
+                    inserted += 1
+
+            connection.commit()
+
         return inserted
 
     def _save_json(self, items: list[dict]) -> int:
@@ -90,7 +128,7 @@ class Store:
         return len(nouveaux)
 
     def count(self) -> int:
-        
+        """Retourne le nombre total d'items dans le store."""
         if self.backend == "csv":
             if not self.path.exists():
                 return 0
@@ -124,7 +162,7 @@ class Store:
         return []
 
     def export_to(self, other_backend: str, path: str) -> int:
-        
+        """Exporte tous les items vers un autre backend. Retourne le nb exporte."""
         items = self._load_all_items()
         cible = Store(other_backend, path)
         return cible.save(items)
