@@ -1,6 +1,5 @@
 from unittest.mock import patch, MagicMock
 
-import json
 import yaml
 
 from dataharvest.config import Config
@@ -94,5 +93,6 @@ def test_orchestrator_detail_pattern_enriches_items(tmp_path):
     assert rapport["items_stockes"] == 2
 
     import json
-    stockes = json.load(open(tmp_path / "out_detail.json"))
+    with open(tmp_path / "out_detail.json") as f:
+        stockes = json.load(f)
     assert all(item["extra"] == "valeur trouvee" for item in stockes)

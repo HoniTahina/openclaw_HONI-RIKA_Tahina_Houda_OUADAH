@@ -1,41 +1,31 @@
-# Site 4/5 -- Niveau 2
+# Site 1/5 -- Niveau 1
+# La note (/5) est encodee UNIQUEMENT dans la classe CSS de <p class="star-rating Three">
+# (pas de texte visible). D'ou l'usage de {selector, attr: class} plutot
+# qu'un simple selecteur texte -- extension necessaire de GenericPipeline,
+# documentee dans le rapport (section Difficultes).
 
-# Points d'attention :
-# - Le titre n'est pas directement le texte du <a> (qui contient aussi une
-#   icone SVG et un sigle <small> type "DVF") : il faut cibler le
-#   <span class="... truncate ..."> a l'interieur.
-# - L'organisation suit le meme schema : le texte est dans un <div> imbrique
-#   dans le <a>, pas sur le <a> directement.
-# - La date n'est PAS une balise <time>, juste un <div> avec le texte brut
-#   "Mis a jour le ..." / "Mis a jour il y a X jours" / "aujourd'hui" etc.
-#   (format non uniforme, pas de date ISO exploitable directement).
-
-url: https://www.data.gouv.fr/datasets/search
-row_selector: "article"
+url: https://books.toscrape.com/
 pagination:
-  pattern: "?page={n}"
+  pattern: "catalogue/page-{n}.html"
   start: 1
   max_pages: 5
 selectors:
   titre:
-    selector: "h3 a span.truncate"
+    selector: "article.product_pod h3 a"
     attr: text
   url:
-    selector: "h3 a"
+    selector: "article.product_pod h3 a"
     attr: href
-  organisation:
-    selector: "a[href^='/organizations/'] div.truncate"
-    attr: text
-  date:
-    selector: "div.text-gray-medium.whitespace-nowrap"
-    attr: text
-validator:
-  required_fields: [titre, url]
+  prix: "article.product_pod p.price_color"
+  note:
+    selector: "article.product_pod p.star-rating"
+    attr: class
+  disponibilite: "article.product_pod p.instock.availability"
 fetcher:
-  delay: 1.5
+  delay: 1.0
   retries: 3
   timeout: 15
   user_agent: "DataHarvest/1.0 (+contact@ipssi.fr)"
 store:
-  backend: csv
-  path: output/datagouv.csv
+  backend: sqlite
+  path: output/books.db

@@ -1,0 +1,1184 @@
+[
+  {
+    "nom_court": "Afghanistan",
+    "url": "https://fr.wikipedia.org/wiki/Afghanistan",
+    "capitale": "Kaboul",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Afrique du Sud",
+    "url": "https://fr.wikipedia.org/wiki/Afrique_du_Sud",
+    "capitale": "Pretoria",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Albanie",
+    "url": "https://fr.wikipedia.org/wiki/Albanie",
+    "capitale": "Tirana",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Algérie",
+    "url": "https://fr.wikipedia.org/wiki/Algérie",
+    "capitale": "Alger",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Allemagne",
+    "url": "https://fr.wikipedia.org/wiki/Allemagne",
+    "capitale": "Berlin",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Andorre",
+    "url": "https://fr.wikipedia.org/wiki/Andorre",
+    "capitale": "Andorre-la-Vieille",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Angola",
+    "url": "https://fr.wikipedia.org/wiki/Angola",
+    "capitale": "Luanda",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Antigua-et-Barbuda",
+    "url": "https://fr.wikipedia.org/wiki/Antigua-et-Barbuda",
+    "capitale": "Saint John's",
+    "continent": "Amérique"
+  },
+  {
+    "nom_court": "Arabie saoudite",
+    "url": "https://fr.wikipedia.org/wiki/Arabie_saoudite",
+    "capitale": "Riyad",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Argentine",
+    "url": "https://fr.wikipedia.org/wiki/Argentine",
+    "capitale": "Buenos Aires",
+    "continent": "Amérique"
+  },
+  {
+    "nom_court": "Arménie",
+    "url": "https://fr.wikipedia.org/wiki/Arménie",
+    "capitale": "Erevan",
+    "continent": ""
+  },
+  {
+    "nom_court": "Australie",
+    "url": "https://fr.wikipedia.org/wiki/Australie",
+    "capitale": "Canberra",
+    "continent": "Océanie"
+  },
+  {
+    "nom_court": "Autriche",
+    "url": "https://fr.wikipedia.org/wiki/Autriche",
+    "capitale": "Vienne",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Azerbaïdjan",
+    "url": "https://fr.wikipedia.org/wiki/Azerbaïdjan",
+    "capitale": "Bakou",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Bahamas",
+    "url": "https://fr.wikipedia.org/wiki/Bahamas",
+    "capitale": "Nassau",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Bahreïn",
+    "url": "https://fr.wikipedia.org/wiki/Bahreïn",
+    "capitale": "Manama",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Bangladesh",
+    "url": "https://fr.wikipedia.org/wiki/Bangladesh",
+    "capitale": "Dacca",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Barbade",
+    "url": "https://fr.wikipedia.org/wiki/Barbade",
+    "capitale": "Bridgetown",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Belgique",
+    "url": "https://fr.wikipedia.org/wiki/Belgique",
+    "capitale": "Bruxelles",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Belize",
+    "url": "https://fr.wikipedia.org/wiki/Belize",
+    "capitale": "Belmopan",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Bénin",
+    "url": "https://fr.wikipedia.org/wiki/Bénin",
+    "capitale": "Porto-Novo",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Bhoutan",
+    "url": "https://fr.wikipedia.org/wiki/Bhoutan",
+    "capitale": "Thimphou",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Bélarus",
+    "url": "https://fr.wikipedia.org/wiki/Biélorussie",
+    "capitale": "Minsk",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Birmanie",
+    "url": "https://fr.wikipedia.org/wiki/Birmanie",
+    "capitale": "Naypyidaw",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Bolivie",
+    "url": "https://fr.wikipedia.org/wiki/Bolivie",
+    "capitale": "Sucre",
+    "continent": "Amérique"
+  },
+  {
+    "nom_court": "Bosnie-Herzégovine",
+    "url": "https://fr.wikipedia.org/wiki/Bosnie-Herzégovine",
+    "capitale": "Sarajevo",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Botswana",
+    "url": "https://fr.wikipedia.org/wiki/Botswana",
+    "capitale": "Gaborone",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Brésil",
+    "url": "https://fr.wikipedia.org/wiki/Brésil",
+    "capitale": "Brasilia",
+    "continent": "Amérique du Sud"
+  },
+  {
+    "nom_court": "Brunei",
+    "url": "https://fr.wikipedia.org/wiki/Brunei",
+    "capitale": "Bandar Seri Begawan",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Bulgarie",
+    "url": "https://fr.wikipedia.org/wiki/Bulgarie",
+    "capitale": "Sofia",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Burkina",
+    "url": "https://fr.wikipedia.org/wiki/Burkina",
+    "capitale": "Ouagadougou",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Burundi",
+    "url": "https://fr.wikipedia.org/wiki/Burundi",
+    "capitale": "Bujumbura",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Cambodge",
+    "url": "https://fr.wikipedia.org/wiki/Cambodge",
+    "capitale": "Phnom Penh",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Cameroun",
+    "url": "https://fr.wikipedia.org/wiki/Cameroun",
+    "capitale": "Yaoundé",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Canada",
+    "url": "https://fr.wikipedia.org/wiki/Canada",
+    "capitale": "Ottawa",
+    "continent": "Amérique"
+  },
+  {
+    "nom_court": "Cap-Vert",
+    "url": "https://fr.wikipedia.org/wiki/Cap-Vert",
+    "capitale": "Praia",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "République centrafricaine",
+    "url": "https://fr.wikipedia.org/wiki/République_centrafricaine",
+    "capitale": "Bangui",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Chili",
+    "url": "https://fr.wikipedia.org/wiki/Chili",
+    "capitale": "Santiago",
+    "continent": "Amérique"
+  },
+  {
+    "nom_court": "Chine",
+    "url": "https://fr.wikipedia.org/wiki/République_populaire_de_Chine",
+    "capitale": "Pékin",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Chypre",
+    "url": "https://fr.wikipedia.org/wiki/Chypre_(pays)",
+    "capitale": "Nicosie",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Colombie",
+    "url": "https://fr.wikipedia.org/wiki/Colombie",
+    "capitale": "Bogota",
+    "continent": "Amérique"
+  },
+  {
+    "nom_court": "Comores",
+    "url": "https://fr.wikipedia.org/wiki/Comores_(pays)",
+    "capitale": "Moroni",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Congo",
+    "url": "https://fr.wikipedia.org/wiki/République_du_Congo",
+    "capitale": "Brazzaville",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "République démocratique du Congo",
+    "url": "https://fr.wikipedia.org/wiki/République_démocratique_du_Congo",
+    "capitale": "Kinshasa",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Îles Cook",
+    "url": "https://fr.wikipedia.org/wiki/Îles_Cook",
+    "capitale": "Avarua",
+    "continent": "Océanie"
+  },
+  {
+    "nom_court": "Corée du Nord",
+    "url": "https://fr.wikipedia.org/wiki/Corée_du_Nord",
+    "capitale": "Pyongyang",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Corée du Sud",
+    "url": "https://fr.wikipedia.org/wiki/Corée_du_Sud",
+    "capitale": "Séoul",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Costa Rica",
+    "url": "https://fr.wikipedia.org/wiki/Costa_Rica",
+    "capitale": "San José",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Côte d'Ivoire",
+    "url": "https://fr.wikipedia.org/wiki/Côte_d'Ivoire",
+    "capitale": "Yamoussoukro",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Croatie",
+    "url": "https://fr.wikipedia.org/wiki/Croatie",
+    "capitale": "Zagreb",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Cuba",
+    "url": "https://fr.wikipedia.org/wiki/Cuba",
+    "capitale": "La Havane",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Danemark",
+    "url": "https://fr.wikipedia.org/wiki/Danemark",
+    "capitale": "Copenhague",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Djibouti",
+    "url": "https://fr.wikipedia.org/wiki/Djibouti",
+    "capitale": "Djibouti",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "République dominicaine",
+    "url": "https://fr.wikipedia.org/wiki/République_dominicaine",
+    "capitale": "Saint-Domingue",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Dominique",
+    "url": "https://fr.wikipedia.org/wiki/Dominique_(pays)",
+    "capitale": "Roseau",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Égypte",
+    "url": "https://fr.wikipedia.org/wiki/Égypte",
+    "capitale": "Le Caire",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Émirats arabes unis",
+    "url": "https://fr.wikipedia.org/wiki/Émirats_arabes_unis",
+    "capitale": "Abou Dabi",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Équateur",
+    "url": "https://fr.wikipedia.org/wiki/Équateur_(pays)",
+    "capitale": "Quito",
+    "continent": "Amérique"
+  },
+  {
+    "nom_court": "Érythrée",
+    "url": "https://fr.wikipedia.org/wiki/Érythrée",
+    "capitale": "Asmara",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Espagne",
+    "url": "https://fr.wikipedia.org/wiki/Espagne",
+    "capitale": "Madrid",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Estonie",
+    "url": "https://fr.wikipedia.org/wiki/Estonie",
+    "capitale": "Tallinn",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Eswatini",
+    "url": "https://fr.wikipedia.org/wiki/Eswatini",
+    "capitale": "Mbabane",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "États-Unis",
+    "url": "https://fr.wikipedia.org/wiki/États-Unis",
+    "capitale": "Washington, D.C.",
+    "continent": "Amérique"
+  },
+  {
+    "nom_court": "Éthiopie",
+    "url": "https://fr.wikipedia.org/wiki/Éthiopie",
+    "capitale": "Addis-Abeba",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Fidji",
+    "url": "https://fr.wikipedia.org/wiki/Fidji",
+    "capitale": "Suva",
+    "continent": "Océanie"
+  },
+  {
+    "nom_court": "Finlande",
+    "url": "https://fr.wikipedia.org/wiki/Finlande",
+    "capitale": "Helsinki",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "France",
+    "url": "https://fr.wikipedia.org/wiki/France",
+    "capitale": "Paris",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Gabon",
+    "url": "https://fr.wikipedia.org/wiki/Gabon",
+    "capitale": "Libreville",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Gambie",
+    "url": "https://fr.wikipedia.org/wiki/Gambie",
+    "capitale": "Banjul",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Géorgie",
+    "url": "https://fr.wikipedia.org/wiki/Géorgie_(pays)",
+    "capitale": "Tbilissi",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Ghana",
+    "url": "https://fr.wikipedia.org/wiki/Ghana",
+    "capitale": "Accra",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Grèce",
+    "url": "https://fr.wikipedia.org/wiki/Grèce",
+    "capitale": "Athènes",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Grenade",
+    "url": "https://fr.wikipedia.org/wiki/Grenade_(pays)",
+    "capitale": "Saint-Georges",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Guatemala",
+    "url": "https://fr.wikipedia.org/wiki/Guatemala",
+    "capitale": "Guatemala",
+    "continent": "Amérique"
+  },
+  {
+    "nom_court": "Guinée",
+    "url": "https://fr.wikipedia.org/wiki/Guinée",
+    "capitale": "Conakry",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Guinée-Bissau",
+    "url": "https://fr.wikipedia.org/wiki/Guinée-Bissau",
+    "capitale": "Bissau",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Guinée équatoriale",
+    "url": "https://fr.wikipedia.org/wiki/Guinée_équatoriale",
+    "capitale": "Ciudad de la Paz",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Guyana",
+    "url": "https://fr.wikipedia.org/wiki/Guyana",
+    "capitale": "Georgetown",
+    "continent": "Amérique"
+  },
+  {
+    "nom_court": "Haïti",
+    "url": "https://fr.wikipedia.org/wiki/Haïti",
+    "capitale": "Port-au-Prince",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Honduras",
+    "url": "https://fr.wikipedia.org/wiki/Honduras",
+    "capitale": "Tegucigalpa",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Hongrie",
+    "url": "https://fr.wikipedia.org/wiki/Hongrie",
+    "capitale": "Budapest",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Inde",
+    "url": "https://fr.wikipedia.org/wiki/Inde",
+    "capitale": "New Delhi",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Indonésie",
+    "url": "https://fr.wikipedia.org/wiki/Indonésie",
+    "capitale": "Jakarta",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Irak",
+    "url": "https://fr.wikipedia.org/wiki/Irak",
+    "capitale": "Bagdad",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Iran",
+    "url": "https://fr.wikipedia.org/wiki/Iran",
+    "capitale": "Téhéran",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Irlande",
+    "url": "https://fr.wikipedia.org/wiki/Irlande_(pays)",
+    "capitale": "Dublin",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Islande",
+    "url": "https://fr.wikipedia.org/wiki/Islande",
+    "capitale": "Reykjavik",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Israël",
+    "url": "https://fr.wikipedia.org/wiki/Israël",
+    "capitale": "Jérusalem",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Italie",
+    "url": "https://fr.wikipedia.org/wiki/Italie",
+    "capitale": "Rome",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Jamaïque",
+    "url": "https://fr.wikipedia.org/wiki/Jamaïque",
+    "capitale": "Kingston",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Japon",
+    "url": "https://fr.wikipedia.org/wiki/Japon",
+    "capitale": "Tokyo",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Jordanie",
+    "url": "https://fr.wikipedia.org/wiki/Jordanie",
+    "capitale": "Amman",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Kazakhstan",
+    "url": "https://fr.wikipedia.org/wiki/Kazakhstan",
+    "capitale": "Astana",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Kenya",
+    "url": "https://fr.wikipedia.org/wiki/Kenya",
+    "capitale": "Nairobi",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Kirghizie",
+    "url": "https://fr.wikipedia.org/wiki/Kirghizie",
+    "capitale": "Bichkek",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Kiribati",
+    "url": "https://fr.wikipedia.org/wiki/Kiribati",
+    "capitale": "Tarawa-Sud",
+    "continent": "Océanie"
+  },
+  {
+    "nom_court": "Koweït",
+    "url": "https://fr.wikipedia.org/wiki/Koweït",
+    "capitale": "Ville de Koweït",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Laos",
+    "url": "https://fr.wikipedia.org/wiki/Laos",
+    "capitale": "Vientiane",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Lesotho",
+    "url": "https://fr.wikipedia.org/wiki/Lesotho",
+    "capitale": "Maseru",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Lettonie",
+    "url": "https://fr.wikipedia.org/wiki/Lettonie",
+    "capitale": "Riga",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Liban",
+    "url": "https://fr.wikipedia.org/wiki/Liban",
+    "capitale": "Beyrouth",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Libéria",
+    "url": "https://fr.wikipedia.org/wiki/Libéria",
+    "capitale": "Monrovia",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Libye",
+    "url": "https://fr.wikipedia.org/wiki/Libye",
+    "capitale": "Tripoli",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Liechtenstein",
+    "url": "https://fr.wikipedia.org/wiki/Liechtenstein",
+    "capitale": "Vaduz",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Lituanie",
+    "url": "https://fr.wikipedia.org/wiki/Lituanie",
+    "capitale": "Vilnius",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Luxembourg",
+    "url": "https://fr.wikipedia.org/wiki/Luxembourg",
+    "capitale": "Luxembourg-Ville",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Macédoine du Nord",
+    "url": "https://fr.wikipedia.org/wiki/Macédoine_du_Nord",
+    "capitale": "Skopje",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Madagascar",
+    "url": "https://fr.wikipedia.org/wiki/Madagascar",
+    "capitale": "Antananarivo",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Malaisie",
+    "url": "https://fr.wikipedia.org/wiki/Malaisie",
+    "capitale": "Kuala Lumpur",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Malawi",
+    "url": "https://fr.wikipedia.org/wiki/Malawi",
+    "capitale": "Lilongwe",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Maldives",
+    "url": "https://fr.wikipedia.org/wiki/Maldives",
+    "capitale": "Malé",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Mali",
+    "url": "https://fr.wikipedia.org/wiki/Mali",
+    "capitale": "Bamako",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Malte",
+    "url": "https://fr.wikipedia.org/wiki/Malte",
+    "capitale": "La Valette",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Maroc",
+    "url": "https://fr.wikipedia.org/wiki/Maroc",
+    "capitale": "Rabat",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Marshall",
+    "url": "https://fr.wikipedia.org/wiki/Îles_Marshall",
+    "capitale": "Delap-Uliga-Darrit",
+    "continent": "Océanie"
+  },
+  {
+    "nom_court": "Maurice",
+    "url": "https://fr.wikipedia.org/wiki/Maurice_(pays)",
+    "capitale": "Port-Louis",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Mauritanie",
+    "url": "https://fr.wikipedia.org/wiki/Mauritanie",
+    "capitale": "Nouakchott",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Mexique",
+    "url": "https://fr.wikipedia.org/wiki/Mexique",
+    "capitale": "Mexico",
+    "continent": "Amérique"
+  },
+  {
+    "nom_court": "Micronésie",
+    "url": "https://fr.wikipedia.org/wiki/États_fédérés_de_Micronésie",
+    "capitale": "Palikir",
+    "continent": "Océanie"
+  },
+  {
+    "nom_court": "Moldavie",
+    "url": "https://fr.wikipedia.org/wiki/Moldavie",
+    "capitale": "Chișinău",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Monaco",
+    "url": "https://fr.wikipedia.org/wiki/Monaco",
+    "capitale": "Monaco",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Mongolie",
+    "url": "https://fr.wikipedia.org/wiki/Mongolie",
+    "capitale": "Oulan-Bator",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Monténégro",
+    "url": "https://fr.wikipedia.org/wiki/Monténégro",
+    "capitale": "Podgorica",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Mozambique",
+    "url": "https://fr.wikipedia.org/wiki/Mozambique",
+    "capitale": "Maputo",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Namibie",
+    "url": "https://fr.wikipedia.org/wiki/Namibie",
+    "capitale": "Windhoek",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Nauru",
+    "url": "https://fr.wikipedia.org/wiki/Nauru",
+    "capitale": "de jure",
+    "continent": "Océanie"
+  },
+  {
+    "nom_court": "Népal",
+    "url": "https://fr.wikipedia.org/wiki/Népal",
+    "capitale": "Katmandou",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Nicaragua",
+    "url": "https://fr.wikipedia.org/wiki/Nicaragua",
+    "capitale": "Managua",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Niger",
+    "url": "https://fr.wikipedia.org/wiki/Niger",
+    "capitale": "Niamey",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Nigéria",
+    "url": "https://fr.wikipedia.org/wiki/Nigéria",
+    "capitale": "Abuja",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Niue",
+    "url": "https://fr.wikipedia.org/wiki/Niue",
+    "capitale": "Alofi",
+    "continent": "Océanie"
+  },
+  {
+    "nom_court": "Norvège",
+    "url": "https://fr.wikipedia.org/wiki/Norvège",
+    "capitale": "Oslo",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Nouvelle-Zélande",
+    "url": "https://fr.wikipedia.org/wiki/Nouvelle-Zélande",
+    "capitale": "Wellington",
+    "continent": "Océanie"
+  },
+  {
+    "nom_court": "Oman",
+    "url": "https://fr.wikipedia.org/wiki/Oman",
+    "capitale": "Mascate",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Ouganda",
+    "url": "https://fr.wikipedia.org/wiki/Ouganda",
+    "capitale": "Kampala",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Ouzbékistan",
+    "url": "https://fr.wikipedia.org/wiki/Ouzbékistan",
+    "capitale": "",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Pakistan",
+    "url": "https://fr.wikipedia.org/wiki/Pakistan",
+    "capitale": "Islamabad",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Palaos",
+    "url": "https://fr.wikipedia.org/wiki/Palaos",
+    "capitale": "Melekeok",
+    "continent": "Océanie"
+  },
+  {
+    "nom_court": "Palestine",
+    "url": "https://fr.wikipedia.org/wiki/Palestine_(État)",
+    "capitale": "Jérusalem",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Panama",
+    "url": "https://fr.wikipedia.org/wiki/Panama",
+    "capitale": "Panama",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Papouasie-Nouvelle-Guinée",
+    "url": "https://fr.wikipedia.org/wiki/Papouasie-Nouvelle-Guinée",
+    "capitale": "Port Moresby",
+    "continent": "Océanie"
+  },
+  {
+    "nom_court": "Paraguay",
+    "url": "https://fr.wikipedia.org/wiki/Paraguay",
+    "capitale": "Asunción",
+    "continent": "Amérique"
+  },
+  {
+    "nom_court": "Pays-Bas",
+    "url": "https://fr.wikipedia.org/wiki/Pays-Bas",
+    "capitale": "Amsterdam",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Pérou",
+    "url": "https://fr.wikipedia.org/wiki/Pérou",
+    "capitale": "Lima",
+    "continent": "Amérique"
+  },
+  {
+    "nom_court": "Philippines",
+    "url": "https://fr.wikipedia.org/wiki/Philippines",
+    "capitale": "Manille",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Pologne",
+    "url": "https://fr.wikipedia.org/wiki/Pologne",
+    "capitale": "Varsovie",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Portugal",
+    "url": "https://fr.wikipedia.org/wiki/Portugal",
+    "capitale": "Lisbonne",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Qatar",
+    "url": "https://fr.wikipedia.org/wiki/Qatar",
+    "capitale": "Doha",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Roumanie",
+    "url": "https://fr.wikipedia.org/wiki/Roumanie",
+    "capitale": "Bucarest",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Royaume-Uni",
+    "url": "https://fr.wikipedia.org/wiki/Royaume-Uni",
+    "capitale": "Londres",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Russie",
+    "url": "https://fr.wikipedia.org/wiki/Russie",
+    "capitale": "Moscou",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Rwanda",
+    "url": "https://fr.wikipedia.org/wiki/Rwanda",
+    "capitale": "Kigali",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Saint-Christophe-et-Niévès",
+    "url": "https://fr.wikipedia.org/wiki/Saint-Christophe-et-Niévès",
+    "capitale": "Basseterre",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Sainte-Lucie",
+    "url": "https://fr.wikipedia.org/wiki/Sainte-Lucie",
+    "capitale": "Castries",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Saint-Marin",
+    "url": "https://fr.wikipedia.org/wiki/Saint-Marin",
+    "capitale": "Saint-Marin",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Saint-Vincent-et-les Grenadines",
+    "url": "https://fr.wikipedia.org/wiki/Saint-Vincent-et-les_Grenadines",
+    "capitale": "Kingstown",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Îles Salomon",
+    "url": "https://fr.wikipedia.org/wiki/Îles_Salomon",
+    "capitale": "Honiara",
+    "continent": "Océanie"
+  },
+  {
+    "nom_court": "Salvador",
+    "url": "https://fr.wikipedia.org/wiki/Salvador",
+    "capitale": "San Salvador",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Samoa",
+    "url": "https://fr.wikipedia.org/wiki/Samoa",
+    "capitale": "Apia",
+    "continent": "Océanie"
+  },
+  {
+    "nom_court": "Sao Tomé-et-Principe",
+    "url": "https://fr.wikipedia.org/wiki/Sao_Tomé-et-Principe",
+    "capitale": "São Tomé",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Sénégal",
+    "url": "https://fr.wikipedia.org/wiki/Sénégal",
+    "capitale": "Dakar",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Serbie",
+    "url": "https://fr.wikipedia.org/wiki/Serbie",
+    "capitale": "Belgrade",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Seychelles",
+    "url": "https://fr.wikipedia.org/wiki/Seychelles",
+    "capitale": "Victoria",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Sierra Leone",
+    "url": "https://fr.wikipedia.org/wiki/Sierra_Leone",
+    "capitale": "Freetown",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Singapour",
+    "url": "https://fr.wikipedia.org/wiki/Singapour",
+    "capitale": "1° 17′ N, 103° 51′ E",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Slovaquie",
+    "url": "https://fr.wikipedia.org/wiki/Slovaquie",
+    "capitale": "Bratislava",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Slovénie",
+    "url": "https://fr.wikipedia.org/wiki/Slovénie",
+    "capitale": "Ljubljana",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Somalie",
+    "url": "https://fr.wikipedia.org/wiki/Somalie",
+    "capitale": "Mogadiscio",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Soudan",
+    "url": "https://fr.wikipedia.org/wiki/Soudan",
+    "capitale": "Khartoum",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Soudan du Sud",
+    "url": "https://fr.wikipedia.org/wiki/Soudan_du_Sud",
+    "capitale": "Djouba",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Sri Lanka",
+    "url": "https://fr.wikipedia.org/wiki/Sri_Lanka",
+    "capitale": "Sri Jayawardenapura Kotte",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Suède",
+    "url": "https://fr.wikipedia.org/wiki/Suède",
+    "capitale": "Stockholm",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Suisse",
+    "url": "https://fr.wikipedia.org/wiki/Suisse",
+    "capitale": "de jure",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Suriname",
+    "url": "https://fr.wikipedia.org/wiki/Suriname",
+    "capitale": "Paramaribo",
+    "continent": "Amérique"
+  },
+  {
+    "nom_court": "Syrie",
+    "url": "https://fr.wikipedia.org/wiki/Syrie",
+    "capitale": "Damas",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Tadjikistan",
+    "url": "https://fr.wikipedia.org/wiki/Tadjikistan",
+    "capitale": "Douchanbé",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Tanzanie",
+    "url": "https://fr.wikipedia.org/wiki/Tanzanie",
+    "capitale": "Dodoma",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Tchad",
+    "url": "https://fr.wikipedia.org/wiki/Tchad",
+    "capitale": "N'Djaména",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Tchéquie",
+    "url": "https://fr.wikipedia.org/wiki/Tchéquie",
+    "capitale": "Prague",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Thaïlande",
+    "url": "https://fr.wikipedia.org/wiki/Thaïlande",
+    "capitale": "Bangkok",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Timor oriental",
+    "url": "https://fr.wikipedia.org/wiki/Timor_oriental",
+    "capitale": "Dili",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Togo",
+    "url": "https://fr.wikipedia.org/wiki/Togo",
+    "capitale": "Lomé",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Tonga",
+    "url": "https://fr.wikipedia.org/wiki/Tonga",
+    "capitale": "Nukuʻalofa",
+    "continent": "Océanie"
+  },
+  {
+    "nom_court": "Trinité-et-Tobago",
+    "url": "https://fr.wikipedia.org/wiki/Trinité-et-Tobago",
+    "capitale": "Port-d'Espagne",
+    "continent": "Amérique centrale"
+  },
+  {
+    "nom_court": "Tunisie",
+    "url": "https://fr.wikipedia.org/wiki/Tunisie",
+    "capitale": "Tunis",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Turkménistan",
+    "url": "https://fr.wikipedia.org/wiki/Turkménistan",
+    "capitale": "Achgabat",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Turquie",
+    "url": "https://fr.wikipedia.org/wiki/Turquie",
+    "capitale": "Ankara",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Tuvalu",
+    "url": "https://fr.wikipedia.org/wiki/Tuvalu",
+    "capitale": "Funafuti",
+    "continent": "Océanie"
+  },
+  {
+    "nom_court": "Ukraine",
+    "url": "https://fr.wikipedia.org/wiki/Ukraine",
+    "capitale": "Kiev",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Uruguay",
+    "url": "https://fr.wikipedia.org/wiki/Uruguay",
+    "capitale": "Montevideo",
+    "continent": "Amérique"
+  },
+  {
+    "nom_court": "Vanuatu",
+    "url": "https://fr.wikipedia.org/wiki/Vanuatu",
+    "capitale": "Port-Vila",
+    "continent": "Océanie"
+  },
+  {
+    "nom_court": "Vatican",
+    "url": "https://fr.wikipedia.org/wiki/Vatican",
+    "capitale": "[1]",
+    "continent": "Europe"
+  },
+  {
+    "nom_court": "Venezuela",
+    "url": "https://fr.wikipedia.org/wiki/Venezuela",
+    "capitale": "Caracas",
+    "continent": "Amérique"
+  },
+  {
+    "nom_court": "Viêt Nam",
+    "url": "https://fr.wikipedia.org/wiki/Viêt_Nam",
+    "capitale": "Hanoï",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Yémen",
+    "url": "https://fr.wikipedia.org/wiki/Yémen",
+    "capitale": "Sanaa",
+    "continent": "Asie"
+  },
+  {
+    "nom_court": "Zambie",
+    "url": "https://fr.wikipedia.org/wiki/Zambie",
+    "capitale": "Lusaka",
+    "continent": "Afrique"
+  },
+  {
+    "nom_court": "Zimbabwe",
+    "url": "https://fr.wikipedia.org/wiki/Zimbabwe",
+    "capitale": "Harare",
+    "continent": "Afrique"
+  }
+]

@@ -1,9 +1,6 @@
 .venv/
 __pycache__/
 *.pyc
-*.db
-*.csv
-output/
 .pytest_cache/
 .coverage
 htmlcov/
