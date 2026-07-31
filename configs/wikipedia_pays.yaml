@@ -1,0 +1,32 @@
+# Site 3/5 -- Niveau 2
+# Selecteurs verifies sur du vrai HTML (rendu Parsoid de Wikipedia, deja
+# rencontre dans un TP anterieur de ce projet -- attention, les liens sont
+# des URLs ABSOLUES, pas relatives, d'ou le "^=" sur l'URL complete).
+#
+# La colonne "Forme longue" n'a pas de classe CSS dediee : on la capture
+# via le pseudo-selecteur CSS4 :has() pour cibler "la cellule <td> juste
+# apres celle qui contient le lien du pays" -- necessite soupsieve recent
+# (installe avec beautifulsoup4). Pas de pagination : toute la liste est
+# sur une seule page (~200 pays repartis en tableaux par lettre A-Z).
+
+url: https://fr.wikipedia.org/wiki/Liste_des_pays_du_monde
+pagination:
+  pattern: null
+  start: 1
+  max_pages: 1
+selectors:
+  nom_court:
+    selector: "table.wikitable td a[href^='https://fr.wikipedia.org/wiki/']"
+    attr: text
+  url:
+    selector: "table.wikitable td a[href^='https://fr.wikipedia.org/wiki/']"
+    attr: href
+  nom_officiel: "table.wikitable td:has(> a[href^='https://fr.wikipedia.org/wiki/']) + td"
+fetcher:
+  delay: 1.0
+  retries: 3
+  timeout: 15
+  user_agent: "DataHarvest/1.0 (+contact@ipssi.fr)"
+store:
+  backend: json
+  path: output/pays_wikipedia.json

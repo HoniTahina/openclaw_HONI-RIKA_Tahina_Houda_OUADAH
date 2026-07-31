@@ -1,0 +1,31 @@
+# Site 1/5 -- Niveau 1
+# La note (/5) est encodee UNIQUEMENT dans la classe CSS de <p class="star-rating Three">
+# (pas de texte visible). D'ou l'usage de {selector, attr: class} plutot
+# qu'un simple selecteur texte -- extension necessaire de GenericPipeline,
+# documentee dans le rapport (section Difficultes).
+
+url: https://books.toscrape.com/
+pagination:
+  pattern: "catalogue/page-{n}.html"
+  start: 1
+  max_pages: 5
+selectors:
+  titre:
+    selector: "article.product_pod h3 a"
+    attr: text
+  url:
+    selector: "article.product_pod h3 a"
+    attr: href
+  prix: "article.product_pod p.price_color"
+  note:
+    selector: "article.product_pod p.star-rating"
+    attr: class
+  disponibilite: "article.product_pod p.instock.availability"
+fetcher:
+  delay: 1.0
+  retries: 3
+  timeout: 15
+  user_agent: "DataHarvest/1.0 (+contact@ipssi.fr)"
+store:
+  backend: sqlite
+  path: output/books.db
