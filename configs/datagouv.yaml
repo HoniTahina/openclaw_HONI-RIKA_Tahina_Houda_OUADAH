@@ -1,0 +1,41 @@
+# Site 4/5 -- Niveau 2
+
+# Points d'attention :
+# - Le titre n'est pas directement le texte du <a> (qui contient aussi une
+#   icone SVG et un sigle <small> type "DVF") : il faut cibler le
+#   <span class="... truncate ..."> a l'interieur.
+# - L'organisation suit le meme schema : le texte est dans un <div> imbrique
+#   dans le <a>, pas sur le <a> directement.
+# - La date n'est PAS une balise <time>, juste un <div> avec le texte brut
+#   "Mis a jour le ..." / "Mis a jour il y a X jours" / "aujourd'hui" etc.
+#   (format non uniforme, pas de date ISO exploitable directement).
+
+url: https://www.data.gouv.fr/datasets/search
+row_selector: "article"
+pagination:
+  pattern: "?page={n}"
+  start: 1
+  max_pages: 5
+selectors:
+  titre:
+    selector: "h3 a span.truncate"
+    attr: text
+  url:
+    selector: "h3 a"
+    attr: href
+  organisation:
+    selector: "a[href^='/organizations/'] div.truncate"
+    attr: text
+  date:
+    selector: "div.text-gray-medium.whitespace-nowrap"
+    attr: text
+validator:
+  required_fields: [titre, url]
+fetcher:
+  delay: 1.5
+  retries: 3
+  timeout: 15
+  user_agent: "DataHarvest/1.0 (+contact@ipssi.fr)"
+store:
+  backend: csv
+  path: output/datagouv.csv
